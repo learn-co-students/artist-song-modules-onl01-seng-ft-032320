@@ -1,14 +1,18 @@
 require 'pry'
 
 class Artist
+  include Paramable
+
   attr_accessor :name
   attr_reader :songs
+
 
   @@artists = []
 
   def initialize
-    @@artists << self
+    super
     @songs = []
+    @@artists << self 
   end
 
   def self.find_by_name(name)
@@ -36,7 +40,7 @@ class Artist
     songs.each { |song| add_song(song) }
   end
 
-  def to_param
-    name.downcase.gsub(' ', '-')
-  end
+  # def to_param
+  #   name.downcase.gsub(' ', '-')
+  # end
 end
