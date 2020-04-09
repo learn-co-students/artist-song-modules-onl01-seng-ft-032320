@@ -18,9 +18,15 @@ class Song
   #   @@songs << self
   # end
 
+#<<<<<<< HEAD
   # def self.find_by_name(name)
   #   @@songs.detect{|a| a.name == name} #same as find
   # end
+#=======
+  def self.find_by_name(name)
+    @@songs.detect{|a| a.name == name} #same as find
+  end
+#>>>>>>> 21b3a8ab87f32bce62fd309f3cdcc617ec22d514
 
   def self.all
     @@songs
@@ -38,8 +44,14 @@ class Song
     @artist = artist
   end
 
+#<<<<<<< HEAD
   # def to_param
   #   #makes all letters mininscule
   #   name.downcase.gsub(' ', '-') # the first argument finds it and second replaces it
-  end
+#=======
+  #def to_param
+    #makes all letters mininscule
+    #name.downcase.gsub(' ', '-') # the first argument finds it and second replaces it
+#>>>>>>> 21b3a8ab87f32bce62fd309f3cdcc617ec22d514
+  #end
 end
